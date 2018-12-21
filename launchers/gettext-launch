@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# This launcher resets the locale to `C.UTF-8`, the only locale supported by the core snap to fix GNU Gettext L10N
+# 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com> © 2018
+LANG=C.UTF-8
+
+# By default LC_ALL is NOT set, thus the requirement to set the export attribute
+export LC_ALL=C.UTF-8
+
+exec "${@}"
+
